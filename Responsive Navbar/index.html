@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: #fff;
+            padding: 0; margin: 0;
+            box-sizing: border-box;
+        }
+        nav{
+           background-color: #0f172a; 
+           height: '60px';
+           font-size: larger;
+           padding: 20px 50px;
+           font-family: Arial, Helvetica, sans-serif;
+           transition: all ease-in-out 0.4s;
+
+        }
+        .nav-list{
+            list-style: none;
+            padding: 0;
+            width: 100%;
+            flex-direction: column;
+            display: none;
+            gap: 30px;
+        }
+        .nav-list> li{
+            display: flex;
+            cursor: pointer;
+            justify-content: center;
+            align-items: center;
+            padding: 35px 0;
+            font-size: 30px;
+            border-top: 1px solid #fdfdfd15;
+            transition: all ease-in-out 0.2s;
+        }
+
+        .nav-list li:nth-child(1){
+            border-top: none
+
+        }
+        .nav-list li:hover{
+            background-color: #7f7f7f54;
+        }
+        .logo{
+            font-size: 1.4rem;
+        }
+        .menu{
+            font-size: 2rem;
+            cursor: pointer;
+        }
+        .nav-top{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0;
+        }
+        .cta{
+            background-color: #0ea5e9;
+            padding: 13px 20px;
+            border-radius: 7px;
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+            display: none;
+        }
+        .cta:hover{
+            background-color: #0e96d5
+        }
+
+        @media only screen and (min-width: 720px) and (max-width: 1550px) {       
+         nav{
+            display: flex;
+           justify-content: space-around;
+           align-items: center;
+            height: 60px;
+           padding: 20px 50px;
+
+         }
+         .nav-list> li{
+            border: none;
+            padding:  0;
+            font-size: 20px;
+         }
+         .nav-list li:hover{
+            background-color:#0f172a;
+            color: rgb(191, 189, 189);
+        }
+         .nav-top{
+            display:block;
+            width: 300px;
+            margin-bottom: 0;
+        }
+         .nav-list{
+            display: flex;
+            flex-direction: row;
+
+         }
+         .cta{
+            background-color: #0ea5e9;
+            padding: 10px 10px;
+            width: 105px;
+            border-radius: 7px;
+            margin-top: 0;
+            display:block;
+        }
+        .menu{
+            display: none;
+        }
+        }
+
+       
+       
+    </style>
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="nav-top">
+                <span class="logo">🖖 Company Logo</span>
+                <span class="menu" onclick="menuBar()"  title="menu">🍔</span>
+            </div>
+                <ul class="nav-list">
+                    <li class="links">Home</li>
+                    <li class="links">Course</li>
+                    <li class="links">Blog</li>
+                    <li class="links">Contact</li>
+                </ul>
+                <span class="cta">Call Now</span>
+        </nav>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
+

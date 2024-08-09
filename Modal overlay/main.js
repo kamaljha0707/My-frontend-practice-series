@@ -29,5 +29,4 @@ function handleOutsideClick(e){
 function handleClose(){
     model.style.display = "none"
 
-
 }
